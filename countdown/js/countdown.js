@@ -45,11 +45,13 @@ setInterval(function greeting() {
     let greetingVar = document.getElementById("greeting");
     let greeting;
     if (hours < 24 && hours > 12 ) {
-        greeting = "Morning";
+        greeting = "Good Morning ☀️";
     } else if (12 > hours && hours > 5) {
-        greeting = "Afternoon";
-    } else {
-        greeting = "Evening"
+        greeting = "Good Afternoon 🌞";
+    } else if (hours > 2) {
+        greeting = "Good Evening 🌙";
+    }else {
+        greeting = "Go to sleep 💤"
     };
 
     greetingVar.style.color = getcolor()
