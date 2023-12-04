@@ -66,13 +66,13 @@ let playlist = [
     {title: "Ditto Instrumental" , src:"NewJeans - Ditto (Clean Instrumental).mp3"},
     {title: "Super Shy" , src:'Super Shy.mp3'},
     ];
-let currentIndex = 0;
+let currentIndex = ;
 let audioPlayer = new Audio(playlist[currentIndex].src);
 
 
-function playSong(index) {
-    console.log(playlist.length)
-    currentIndex = index;
+function playSong() {
+    currentIndex = Math.floor(Math.random() * ((playlist.length)));
+    console.log(currentIndex)
     audioPlayer.src = playlist[currentIndex].src;
     console.log("Now playing: " + playlist[currentIndex].src);
     audioPlayer.play();
@@ -94,16 +94,17 @@ audioPlayer.addEventListener('ended', function (){
 let tracker = 'pause';
 
 function pause() {
-
+    console.log(playlist[currentIndex].src)
+    document.getElementById("title").innerHTML = playlist[currentIndex].title;
     if (tracker == 'pause') {
+        audioPlayer.pause();
         console.log('pause');
         document.getElementById("icon").src ="play-icon.png";
-        audioPlayer.pause();
         tracker = 'play';
     } else {
+        audioPlayer.play();
         console.log("Playing...");
         document.getElementById("icon").src ="pause-icon.png";
-        audioPlayer.play();
         tracker = 'pause';
     };
 };
