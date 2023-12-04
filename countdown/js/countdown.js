@@ -44,11 +44,11 @@ setInterval(function greeting() {
 
     let greetingVar = document.getElementById("greeting");
     let greeting;
-    if (hours < 24 && hours > 12 ) {
+    if (hours < 24 && hours > 11 ) {
         greeting = "Good Morning ☀️";
-    } else if (12 > hours && hours > 5) {
+    } else if (11 >= hours && hours > 6) {
         greeting = "Good Afternoon 🌞";
-    } else if (hours > 2) {
+    } else if (hours > 1) { //10pm check again
         greeting = "Good Evening 🌙";
     }else {
         greeting = "Go to sleep 💤"
@@ -68,9 +68,10 @@ let playlist = [
     ];
 let currentIndex = 0;
 let audioPlayer = new Audio(playlist[currentIndex].src);
-let button = document.querySelector("playButton")
+
 
 function playSong(index) {
+    console.log(playlist.length)
     currentIndex = index;
     audioPlayer.src = playlist[currentIndex].src;
     console.log("Now playing: " + playlist[currentIndex].src);
@@ -87,9 +88,25 @@ audioPlayer.addEventListener('ended', function (){
     audioPlayer.play();
 });
 
-selectSong = () => {
+//pause button
 
-}
+
+let tracker = 'pause';
+
+function pause() {
+
+    if (tracker == 'pause') {
+        console.log('pause');
+        document.getElementById("icon").src ="play-icon.png";
+        audioPlayer.pause();
+        tracker = 'play';
+    } else {
+        console.log("Playing...");
+        document.getElementById("icon").src ="pause-icon.png";
+        audioPlayer.play();
+        tracker = 'pause';
+    };
+};
 
 
 
