@@ -66,7 +66,7 @@ let playlist = [
     {title: "Ditto Instrumental" , src:"NewJeans - Ditto (Clean Instrumental).mp3"},
     {title: "Super Shy" , src:'Super Shy.mp3'},
     ];
-let currentIndex = ;
+let currentIndex = 0;
 let audioPlayer = new Audio(playlist[currentIndex].src);
 
 
