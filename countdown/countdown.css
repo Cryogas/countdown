@@ -1,5 +1,7 @@
 body  {
-    background-color: silver;
+    background-image: url("elegant_marble_background_with_gold_glitter_2605.jpg");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
 }
 
 
@@ -16,6 +18,7 @@ body  {
     flex-direction: column;
     /* border: 1px solid; */
     list-style: none;
+    font-weight: bold;
 }
 
 
@@ -46,18 +49,22 @@ body  {
 
 
 .music-player {
-    margin: 50px 0px 0px 0px;
-    text-align: center;
+    margin: 50px  0px 0px;
+    padding: 20px;
+    border: 3px solid;
+    border-radius: 5px;
+    
 }
 
-.focus-playlist button {
+.music-player button {
     border: 1px solid red;
     background-color: black;
     color: white;
-    padding: 5px 32px;
+    padding: 5px 15px;
     text-align: center;
+    height: 33px;
     width: 120px;
-    margin: 0px auto;
+    margin: 0px auto 5px;
     font-size: 10px;
     cursor: pointer;
 }

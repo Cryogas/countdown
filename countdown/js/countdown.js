@@ -66,19 +66,33 @@ let playlist = [
     {title: "OMG Instrumental" , src:"NewJeans - OMG (100 Official Instrumental).mp3"},
     {title: "Ditto Instrumental" , src:"NewJeans - Ditto (Clean Instrumental).mp3"},
     {title: "Super Shy" , src:'Super Shy.mp3'},
-    ];
+];
 let currentIndex = 0;
 let audioPlayer = new Audio(playlist[currentIndex].src);
+let tracker = 'pause';
+
+function displayTitle () {
+    // let buttonText = document.getElementById("playButton")
+    
+    currentIndex = Math.floor(Math.random() * ((playlist.length)));
+    console.log(currentIndex)
+    document.getElementById("playButton").innerHTML = playlist[currentIndex].title;
+}
+
+function display() {
+    document.getElementById("playButton").innerHTML = "Play a song";
+}
+
 
 
 function playSong() {
-    currentIndex = Math.floor(Math.random() * ((playlist.length)));
-    console.log(currentIndex)
     audioPlayer.src = playlist[currentIndex].src;
     console.log("Now playing: " + playlist[currentIndex].src);
     audioPlayer.play();
     console.log ("playSong Success")
     document.getElementById("title").innerHTML = playlist[currentIndex].title;
+    document.getElementById("icon").src ="pause-icon.png";
+    tracker = 'pause';
 }
 
 audioPlayer.addEventListener('ended', function (){
@@ -92,19 +106,16 @@ audioPlayer.addEventListener('ended', function (){
 //pause button
 
 
-let tracker = 'pause';
 
 function pause() {
     console.log(playlist[currentIndex].src)
     document.getElementById("title").innerHTML = playlist[currentIndex].title;
     if (tracker == 'pause') {
         audioPlayer.pause();
-        console.log('pause');
         document.getElementById("icon").src ="play-icon.png";
         tracker = 'play';
     } else {
         audioPlayer.play();
-        console.log("Playing...");
         document.getElementById("icon").src ="pause-icon.png";
         tracker = 'pause';
     };
