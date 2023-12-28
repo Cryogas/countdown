@@ -5,22 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Countdown to second semester</title>
     <script src="js/countdown.js"></script>
-    <!-- <script src="js/greeting.js"></script> -->
     <link rel="stylesheet" href="countdown.css">
     <link rel="icon" type="image/x-icon" href="newjeans_icon.ico">
 </head>
-<body style="background-image: linear-gradient(cyan, white); background-repeat: no-repeat;"> 
-    <h3 style="text-align: center;">Countdown to 8/1/23 (Second Semester)</h3>
+<body> 
+    <h1 style="text-align: center;">Countdown to 8/1/23 (Second Semester)</h1>
     <h2 style="text-align: center;"><span id="greeting"></span>, HG</h2>
     <h2 id="timer" style="text-align: center;" ></h2>
     <div id="goals", style="display: flex; margin: 10px, auto, auto; justify-content: space-evenly;" >
         <div>
-            <h4>Learn Something</h4>
-            <ul>
-                <li>Javascript </li>
-                <li>C++ </li>
-                <li>Databases </li>
-                <li>JS Framework (next.js) </li>
+            <h2>Learn Something</h2>
+            <ul class="tasks">
+                <li>
+                    <label>
+                        <input class="box" type="checkbox" value="off"> Javascript
+                        <button class="delete-button">Delete</button>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input class="box" type="checkbox"> C++
+                        <button class="delete-button">Delete</button>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input class="box" type="checkbox"> JS Framework
+                        <button class="delete-button">Delete</button>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input class="box" type="checkbox"> Databases
+                        <button class="delete-button">Delete</button>
+                    </label>
+                </li>
+
             </ul>
         </div>
         <img src="newjeans_bg.jpg" alt="" height="300px">

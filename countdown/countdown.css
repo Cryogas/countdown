@@ -1,3 +1,8 @@
+body  {
+    background-color: silver;
+}
+
+
 #greeting {
     text-align: center;
 }
@@ -5,6 +10,40 @@
 .focus-playlist {
     display: flex;
 }
+
+.tasks {
+    margin: 10px 0px 0px 0px;
+    flex-direction: column;
+    /* border: 1px solid; */
+    list-style: none;
+}
+
+
+.tasks li {
+    margin: 25px 0px 0px 0px;
+    text-align: left;
+}
+
+.delete-button {
+    float: right;
+    margin: 0 0 0 20px;
+    padding: 5px;
+    background-color: transparent;
+    color: red;
+    border-radius: 5px;
+    border-color: red;
+    border: 1px solid red ;
+    cursor: pointer;
+    transition: 300ms;
+
+}
+.delete-button:hover {
+    color: white;
+    background-color: red;
+    
+    transition: 300ms;
+}
+
 
 .music-player {
     margin: 50px 0px 0px 0px;

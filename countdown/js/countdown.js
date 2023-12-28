@@ -55,6 +55,7 @@ setInterval(function greeting() {
     };
 
     greetingVar.style.color = getcolor()
+    greetingVar.style.transition = 500;
     greetingVar.innerHTML = greeting;
 },1000);
 
